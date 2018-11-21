@@ -14,13 +14,13 @@ public class Author {
     private String firstName;
     private String lastName;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<Book>();
 
     public Author(){
     }
 
-    public Author ( String firstName, String lastNme) {
+    public Author ( String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
